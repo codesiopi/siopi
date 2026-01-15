@@ -59,7 +59,7 @@ body {
   color: #9ca3af;
 }
 
-/* BUTTON LINK */
+/* BUTTON */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -70,7 +70,24 @@ body {
   border-radius: 999px;
   font-size: 14px;
   font-weight: 700;
-  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* EMBED */
+.embed {
+  margin-top: 16px;
+  display: none;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.embed iframe {
+  width: 100%;
+  height: 520px;
+  border: none;
+  background: #000;
 }
 </style>
 </head>
@@ -88,18 +105,30 @@ body {
         untuk produktivitas dan eksperimen digital.
       </p>
 
-      <!-- LINK LANGSUNG (AMAN LYNK) -->
-      <a 
-        href="https://lynk.id/siopi/page/tools-free"
-        class="btn"
-        target="_blank"
-        rel="noopener">
+      <!-- BUTTON TOGGLE -->
+      <button class="btn" onclick="toggleTools()">
         Buka Tools →
-      </a>
+      </button>
+
+      <!-- IFRAME -->
+      <div class="embed" id="toolsBox">
+        <iframe
+          src="https://codesiopi.github.io/siopi/toolsfree.html"
+          loading="lazy">
+        </iframe>
+      </div>
 
     </div>
 
   </div>
 </div>
+
+<script>
+function toggleTools() {
+  const box = document.getElementById("toolsBox");
+  box.style.display = box.style.display === "block" ? "none" : "block";
+}
+</script>
+
 </body>
 </html>

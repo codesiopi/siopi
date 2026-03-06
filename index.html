@@ -25,7 +25,6 @@ color:#111827;
 .page{
 width:100%;
 max-width:800px;
-min-height:100vh;
 padding:40px 20px 80px;
 }
 
@@ -126,22 +125,12 @@ let answer = item.querySelector(".a");
 
 item.addEventListener("click",()=>{
 
-if(item.classList.contains("active")){
-
+if(answer.style.maxHeight){
 answer.style.maxHeight = null;
-item.classList.remove("active");
-
+answer.style.marginTop = "0";
 }else{
-
-document.querySelectorAll(".faq").forEach(f=>{
-f.classList.remove("active");
-f.querySelector(".a").style.maxHeight = null;
-});
-
-item.classList.add("active");
 answer.style.marginTop = "12px";
 answer.style.maxHeight = answer.scrollHeight + "px";
-
 }
 
 });

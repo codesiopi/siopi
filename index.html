@@ -135,6 +135,12 @@ answer.style.maxHeight = answer.scrollHeight + "px";
 
 });
 
+function sendHeight(){
+const height = document.body.scrollHeight;
+window.parent.postMessage(height,"*");
+}
+window.onload = sendHeight;
+
 </script>
 
 </body>

@@ -81,11 +81,6 @@ color:#4b5563;
 transition:max-height .35s ease, margin-top .35s ease;
 }
 
-.faq.active .a{
-max-height:200px;
-margin-top:12px;
-}
-
 </style>
 </head>
 
@@ -126,21 +121,31 @@ Masih Bingung? Tenang, Aku Jawabin Dulu
 <script>
 
 document.querySelectorAll(".faq").forEach(item=>{
+
+let answer = item.querySelector(".a");
+
 item.addEventListener("click",()=>{
 
 if(item.classList.contains("active")){
+
+answer.style.maxHeight = null;
 item.classList.remove("active");
+
 }else{
 
 document.querySelectorAll(".faq").forEach(f=>{
 f.classList.remove("active");
+f.querySelector(".a").style.maxHeight = null;
 });
 
 item.classList.add("active");
+answer.style.marginTop = "12px";
+answer.style.maxHeight = answer.scrollHeight + "px";
 
 }
 
 });
+
 });
 
 </script>

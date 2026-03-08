@@ -13,22 +13,26 @@
 
 body{
   margin:0;
+  background:#c9e1ec;
   font-family:-apple-system, BlinkMacSystemFont, "Segoe UI",
   Roboto, Helvetica, Arial, sans-serif;
 }
 
-/* card full width */
-.card{
-  width:100%;
-  height:120px; /* tinggi tetap */
-  background:#ffffff;
-  padding:20px;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
+/* wrapper */
+.wrapper{
+  padding:40px;
 }
 
-/* teks */
+/* card */
+.card{
+  width:100%;
+  background:#ffffff;
+  padding:30px;
+  border:2px dotted orange;
+  border-radius:6px;
+}
+
+/* judul */
 .card h3{
   margin:0 0 6px;
   font-size:18px;
@@ -36,6 +40,7 @@ body{
   color:#000;
 }
 
+/* deskripsi */
 .card p{
   margin:0;
   font-size:14px;
@@ -47,10 +52,14 @@ body{
 
 <body>
 
-<div class="card">
-  <h3>💻 Web Development</h3>
-  <p>Jalur untuk membangun website profesional dan skill web dari dasar.</p>
+<div class="wrapper">
+
+  <div class="card">
+    <h3>💻 Web Development</h3>
+    <p>Jalur untuk membantu website profesional</p>
+  </div>
+
 </div>
 
 </body>
-</html>
+  </html>
